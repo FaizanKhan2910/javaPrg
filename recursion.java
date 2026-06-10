@@ -1,5 +1,3 @@
-
-
 public class recursion {
 
     public static void print(int n){
@@ -163,23 +161,26 @@ if( lastPlace == 0){
 
     }
 
-     
-     public static int fibo(int n){
-        if( n < 2){
-            return n;
-        }
-        return fibo(n-1) + fibo(n-2);
-        }
+     public static void FindIndex( int[] arr , int key,  int i ){
+            if( i == arr.length ){
+                return;
+            }
+            if( arr[i] == key ){
+                System.out.print(i+" ");
+            }
+            FindIndex(arr, key, i+1);
+     }
 
-            
 
 
 
      public static void main(String[] args) {
+     int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
+     int key = 2;
+     FindIndex(arr, key, 0);
      
-       int ans = fibo(4);
-       System.out.println(ans);
+    
+        }
         
         
     }
-} 
