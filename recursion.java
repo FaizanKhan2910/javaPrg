@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class recursion {
 
     public static void print(int n){
@@ -188,17 +187,22 @@ if( lastPlace == 0){
                 System.out.print(digit[lastDigit] +" ");
 
      }
+     public static int StrLength(String str, int i){
+        //base case
+        if( i == str.length() ){
+            return 0;
+        }
 
+        return 1 + StrLength(str, i+1);
+
+        
+
+     }
 
 
      public static void main(String[] args) {
-    //  int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
-    //  int key = 2;
-    //  FindIndex(arr, key, 0);
-            Scanner sc = new Scanner(System.in);
-            
-            int nums = sc.nextInt();
-            ConDigToText(nums);
+        String str = "f";
+        System.out.println(StrLength(str, 0));
     
         }
         
