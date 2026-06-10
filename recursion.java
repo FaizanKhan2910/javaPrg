@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class recursion {
 
     public static void print(int n){
@@ -171,14 +172,33 @@ if( lastPlace == 0){
             FindIndex(arr, key, i+1);
      }
 
+     public static void ConDigToText(int nums){
+            if( nums == 0){
+                return ;
+            }
+            
+            String digit[] = { 
+                "zero","one ","","three","four","five","six","seven",
+                "eight","nine"
+            };
+
+               int lastDigit = nums % 10;
+                ConDigToText(nums / 10 );
+
+                System.out.print(digit[lastDigit] +" ");
+
+     }
 
 
 
      public static void main(String[] args) {
-     int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
-     int key = 2;
-     FindIndex(arr, key, 0);
-     
+    //  int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2};
+    //  int key = 2;
+    //  FindIndex(arr, key, 0);
+            Scanner sc = new Scanner(System.in);
+            
+            int nums = sc.nextInt();
+            ConDigToText(nums);
     
         }
         
