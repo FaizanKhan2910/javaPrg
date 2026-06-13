@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class recursion {
 
     public static void print(int n){
@@ -198,12 +201,48 @@ if( lastPlace == 0){
         
 
      }
+     
+     public static int ContiSubStr(String str , int i, int j){
+        //base condition
+            
+            if( i == str.length()){
+                return 0;
+            }
 
+            if (j == str.length()){
+                return ContiSubStr(str, i+1, i+1);
+            }
+                int count = 0;
+            if( str.charAt(i) == str.charAt(j)){
+                    count ++;
+                    
+            }
+
+            return count + ContiSubStr(str, i , j+1);
+
+     }
+
+     public static int MergeSort( int[] arr){
+            if( arr.length == 1){
+                return arr;
+            }
+            int mid = arr.length / 2;
+
+            int[] left = MergeSort(Arrays.copyOfRange(arr, 0, mid));
+            int[] right = MergeSort(Arrays.copyOfRange(arr, mid+1, arr.length));
+
+            return merge(left , right);
+
+
+        }
+             public static void merge(int[] first, int[] second){
+
+                
+        }
 
      public static void main(String[] args) {
-        String str = "f";
-        System.out.println(StrLength(str, 0));
-    
+            int[] arr = { 8, 3, 2, 5, 6, 12, 4};
+
         }
         
         

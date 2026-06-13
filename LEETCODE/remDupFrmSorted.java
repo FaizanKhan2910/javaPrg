@@ -15,3 +15,4 @@ class Solution {
         int k = remDup(nums);
       
     }
+}
